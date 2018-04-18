@@ -27,6 +27,9 @@
 			top: 0;
 			min-width: 100%;
 			min-height: 100%;
+			width: auto;
+    		height: auto;
+			background-size: cover;
 			z-index: -1;
 		}
 
@@ -52,6 +55,14 @@
 			border-radius: .5em;
 			font-size: 2.5em;
 			background-color: rgba(0, 0, 0, 0.3);
+			transition: .5s;
+		}
+
+		#header_label:hover{
+			background-color: rgba(255, 255, 255, 0.3);
+			transition: .5s;
+			color: black;
+			
 		}
 
 	</style>
@@ -62,9 +73,10 @@
 <body>
 
 		
-        <video autoplay muted loop id="background_video">
-            <source src="./videos/egg_avacado_video.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-            <source src="./videos/egg_avacado_video.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+        <video autoplay muted loop id="background_video" poster="./images/egg_avacado.gif">
+			
+			<source src="./videos/egg_avacado_video.webm" type="video/webm" />	
+			
 		</video>
 		
 		
