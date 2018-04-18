@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+	<title>Chef Hannah</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--jquery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!--Google Font-->
+	<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+	 crossorigin="anonymous">
+	<style>
+* {
+	font-family: 'Tangerine', cursive;
+}
+
+		#background_video{
+			position: fixed;
+			left: 0;
+			top: 0;
+			min-width: 100%;
+			min-height: 100%;
+			z-index: -1;
+		}
+
+		#overlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			z-index: 0;
+			display: flex;
+			align-items: center;
+  			justify-content: center;
+		}
+
+		#header_label{
+			border-color: silver;
+			border-width: 1px;
+			border-style: solid;
+			color: silver;
+			padding: 0px 20px;
+			border-radius: .5em;
+			font-size: 2.5em;
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+
+	</style>
+
+
+</head>
+
+<body>
+
+		
+        <video autoplay muted loop id="background_video">
+            <source src="./videos/egg_avacado_video.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+            <source src="./videos/egg_avacado_video.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+		</video>
+		
+		
+		<div id="overlay">
+
+			<div id="header_label">
+				Hannah Pienknagura
+			</div>
+
+		</div>
+		
+
+</body>
+
+<script>
+
+</script>
+</html>
