@@ -17,20 +17,18 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
 	 crossorigin="anonymous">
 	<style>
-* {
-	font-family: 'Tangerine', cursive;
-}
+		* {
+			font-family: 'Tangerine', cursive;
+		}
 
 		#background_video{
 			position: fixed;
-			left: 0;
-			top: 0;
 			min-width: 100%;
 			min-height: 100%;
-			width: auto;
-    		height: auto;
-			background-size: cover;
-			z-index: -1;
+			overflow: hidden;
+			top:0;
+			left:-50%;
+			z-index: 0;
 		}
 
 		#overlay {
@@ -43,55 +41,171 @@
 			z-index: 0;
 			display: flex;
 			align-items: center;
-  			justify-content: center;
+			justify-content: center;
 		}
 
-		#header_label{
+		#header_label {
 			border-color: silver;
 			border-width: 1px;
 			border-style: solid;
 			color: silver;
 			padding: 0px 20px;
 			border-radius: .5em;
-			font-size: 2.5em;
+			font-size: 3vw;
 			background-color: rgba(0, 0, 0, 0.3);
-			transition: .5s;
+			transition: .25s;
 		}
 
-		#header_label:hover{
+		#header_label:hover {
 			background-color: rgba(255, 255, 255, 0.3);
-			transition: .5s;
+			transition: .25s;
 			color: black;
+
+		}
+
+		#left_column{
+			display: flex;
+			position: fixed;
+			flex-wrap: wrap;
+  			top: 0;
+  			left: 0;
+  			width: 30%;
+  			height: 100%;
+			align-items: center;
+			justify-content: center;
+			background-color: rgba(0, 0, 0, 0.5);
+			z-index: 1;
+			min-width: 300px;
+		}
+		#title{
+			color: silver;
+			margin: 10%;
+			font-size: 4vw;
+			transition: .25s;
+		}
+		#right_column{
+			position: relative;
+			float: right;
+			width:70%;
+			background-color: white;
+			z-index: 1;
+			text-align: center;
 			
 		}
-
+		#header_container{
+			text-align: center;
+		}
+		@media (max-width: 1100px) {
+			#left_column{
+				display: none;
+			}
+			#right_column{
+				width: 100%;
+			}
+		}
 	</style>
 
 
 </head>
 
 <body>
+<!--original video landing page option-->
+<!--
+	<video autoplay muted loop id="background_video" poster="./images/egg_avacado.gif">
 
-		
-        <video autoplay muted loop id="background_video" poster="./images/egg_avacado.gif">
-			
-			<source src="./videos/egg_avacado_video.webm" type="video/webm" />	
-			
-		</video>
-		
-		
-		<div id="overlay">
+		<source src="./videos/egg_avacado_video.webm" type="video/webm" />
 
-			<div id="header_label">
-				Hannah Pienknagura
+	</video>
+
+
+	<div id="overlay">
+
+		<div id="header_label">
+			Hannah Pienknagura
+		</div>
+
+	</div>
+-->
+
+
+		<video autoplay muted loop id="background_video">
+				<source src="./videos/veg_video.mp4" type="video/mp4"/>
+			</video>
+
+		<div id="left_column">
+				<div id="header_container">
+				<div id="header_label">
+						Hannah Pienknagura
+					</div>
+					<div id="title">
+						Personal Chef
+					</div>
+				</div>
+		</div>
+		<div id="right_column">
+
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			<div>Cool stuff about Hannah</div>
+			
+			
 			</div>
 
-		</div>
-		
 
 </body>
 
 <script>
 
 </script>
+
 </html>
