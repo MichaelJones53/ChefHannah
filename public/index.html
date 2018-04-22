@@ -7,171 +7,121 @@
 	<title>Chef Hannah</title>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--jquery-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!--Google Font-->
 	<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 	<style>
 		* {
 			font-family: 'Tangerine', cursive;
 		}
-
-		#background_video{
-			position: fixed;
-			min-width: 100%;
-			min-height: 100%;
-			overflow: hidden;
-			top:0;
-			left:-50%;
-			z-index: 0;
+		body, html {
+			height: 100%;
+			margin: 0;
 		}
+		.bg {
+			/* The image used */
+			background-image: url("./images/person_eatting_at_table.jpg");
+			
+			/* Full height */
+			height: 100%; 
 
-		#header_label {
-			border-color: silver;
-			border-width: 1px;
-			border-style: solid;
-			color: silver;
-			padding: 0px 20px;
-			border-radius: .5em;
-			font-size: 3vw;
-			background-color: rgba(0, 0, 0, 0.3);
-			transition: .25s;
+			/* Center and scale the image nicely */
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
 		}
-
-		#header_label:hover {
-			background-color: rgba(255, 255, 255, 0.3);
-			transition: .25s;
-			color: black;
-			cursor: none;
-
-		}
-
-		#left_column{
+		#overlay{
 			display: flex;
-			position: fixed;
-  			top: 0;
-  			left: 0;
-  			width: 34%;
-  			height: 100%;
 			align-items: center;
-			justify-content: center;
+    justify-content: center;
 			background-color: rgba(0, 0, 0, 0.4);
-			z-index: 1;
-			
+			height: 100%;
 		}
-		#title{
-			text-align: center;
-			color: silver;
-			margin-top:10%;
-			font-size: 4vw;
-			padding-right:30px;
-			transition: .25s;
+		.info-container{
+			color: white;
+			padding-bottom:20vh;
+			transition: 1s;
 		}
-		#right_column{
-			position: relative;
-			float: right;
-			width:66%;
-			background-color: white;
-			z-index: 1;
-			text-align: center;
+		#name-field{
+			font-size: 80px;
+			transition: 1s;
+		}
+		#profession-field{
+			font-size: 50px;
+			transition: 1s;
+		}
+		#location-field{
+			font-size: 40px;
+			transition: 1s;
+		}
 
-			
+nav{
+	position: fixed;
+	font-size: 20px;
+	opacity: .8;
+	background-color: blue !important;
+}
+
+
+
+@media (max-width: 600px) {
+	#name-field{
+			font-size: 50px;
+			transition: 1s;
 		}
-		#header_container{
-			text-align: center;
+		#profession-field{
+			font-size: 35px;
+			transition: 1s;
 		}
-		@media (max-width: 1100px) {
-			#left_column{
-				display: none;
-			}
-			#right_column{
-				width: 100%;
-			}
+		#location-field{
+			font-size: 30px;
+			transition: 1s;
 		}
+}
 	</style>
 
 
 </head>
 
 <body>
-		<video autoplay muted loop id="background_video">
-				<source src="./videos/veg_video.mp4" type="video/mp4"/>
-			</video>
-
-		<div id="left_column">
-				<div id="header_container">
-				<div id="header_label">
-						Hannah Pienknagura
-					</div>
-					<div id="title">
-						Personal Chef
-					</div>
+		<nav class="navbar fixed-top navbar-fixed-top navbar-expand-lg navbar-light bg-light">
+				<a class="navbar-brand" href="#">Hannah Pienknagura</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				  <div class="navbar-nav">
+					<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+					<a class="nav-item nav-link" href="#">About Hannah</a>
+					<a class="nav-item nav-link" href="#">Services</a>
+					<a class="nav-item nav-link" href="#">Contact</a>
+					<a class="nav-item nav-link" href="#">Recipes</a>
+					
+				  </div>
 				</div>
+			  </nav>
+
+
+	<div class="bg">
+		<div id="overlay">
+				<div class="info-container">
+						<div id="name-field">Hannah Pienknagura</div>
+						<div id="profession-field">Personal Chef</div>
+						<div id="location-field">Bay Area</div>
+				
+						</div>
 		</div>
-		<div id="right_column">
+		
 
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
 
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			<div>Cool stuff about Hannah</div>
-			
-			
-			</div>
-
+	</div>
+	
+	
 
 </body>
 
