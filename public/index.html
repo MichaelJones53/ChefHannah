@@ -10,129 +10,231 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--Google Font-->
 	<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
-	
 
-
+	<!--InstaFeed-->
+	<script type="text/javascript" src="./js/instafeed.min.js"></script>
 
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	 crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	 crossorigin="anonymous"></script>
+
+	<!--Slick.js-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" />
 	<style>
 		* {
 			font-family: 'Tangerine', cursive;
 		}
-		body, html {
+
+		body,
+		html {
 			height: 100%;
 			margin: 0;
 		}
+
 		.bg {
 			/* The image used */
 			background-image: url("./images/person_eatting_at_table.jpg");
-			
+
 			/* Full height */
-			height: 100%; 
+			height: 100%;
 
 			/* Center and scale the image nicely */
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
 		}
-		#overlay{
+
+		#overlay {
 			display: flex;
 			align-items: center;
-    		justify-content: center;
+			justify-content: center;
 			background-color: rgba(0, 0, 0, 0.4);
 			height: 100%;
 		}
-		.info-container{
+
+		.info-container {
 			color: white;
-			padding-bottom:20vh;
+			padding-bottom: 20vh;
 			transition: 1s;
 		}
-		#name-field{
+
+		#name-field {
 			font-size: 80px;
 			transition: 1s;
 		}
-		#profession-field{
+
+		#profession-field {
 			font-size: 50px;
 			transition: 1s;
 		}
-		#location-field{
+
+		#location-field {
 			font-size: 40px;
 			transition: 1s;
 		}
 
-nav{
-	font-size: 20px;
-	opacity: .8;
+		nav {
+			font-size: 20px;
+			opacity: .8;
+
+		}
+
+		#instafeed {
+			align-content: center;
+			text-align: center;
+			min-width: 100%;
+		}
+
+		.slick-prev{
+			left: 10px;
+  			z-index: 1;
+		}
+
+		.slick-next{
+			right: 10px;
+  			z-index: 1;
+		}
+		.container {
+			
+			min-width: 100%;
+			color: #333;
+			padding:0;
+		}
+
+		.slick-slide {
+			text-align: center;
+			color: #419be0;
+			background: white;
+		}
+		
+
+		.insta-image {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: rgba(0, 0, 0, 0.4);
+			height: 600px;
 
 }
-
-
-
-
-
-@media (max-width: 600px) {
-	#name-field{
-			font-size: 50px;
-			transition: 1s;
-		}
-		#profession-field{
-			font-size: 35px;
-			transition: 1s;
-		}
-		#location-field{
-			font-size: 30px;
-			transition: 1s;
-		}
+.insta-image img {
+    min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
 }
+
+		@media (max-width: 600px) {
+			#name-field {
+				font-size: 50px;
+				transition: 1s;
+			}
+			#profession-field {
+				font-size: 35px;
+				transition: 1s;
+			}
+			#location-field {
+				font-size: 30px;
+				transition: 1s;
+			}
+		}
 	</style>
-
-
 </head>
 
 <body>
 
-		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-				<a class="navbar-brand" href="#">Hannah Pienknagura</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-				  <span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-				  <div class="navbar-nav">
-						<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-						<a class="nav-item nav-link" href="#">About Hannah</a>
-						<a class="nav-item nav-link" href="#">Services</a>
-						<a class="nav-item nav-link" href="#">Contact</a>
-						<a class="nav-item nav-link" href="#">Recipes</a>	
-				  </div>
-				</div>
-			  </nav>
-		
-
-
+	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">Hannah Pienknagura</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+		 aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			<div class="navbar-nav">
+				<a class="nav-item nav-link active" href="#">Home
+					<span class="sr-only">(current)</span>
+				</a>
+				<a class="nav-item nav-link" href="#">About Hannah</a>
+				<a class="nav-item nav-link" href="#">Services</a>
+				<a class="nav-item nav-link" href="#">Contact</a>
+				<a class="nav-item nav-link" href="#">Recipes</a>
+			</div>
+		</div>
+	</nav>
 	<div class="bg">
 		<div id="overlay">
-				<div class="info-container">
-						<div id="name-field">Hannah Pienknagura</div>
-						<div id="profession-field">Personal Chef</div>
-						<div id="location-field">Bay Area</div>
-				
-						</div>
+			<div class="info-container">
+				<div id="name-field">Hannah Pienknagura</div>
+				<div id="profession-field">Personal Chef</div>
+				<div id="location-field">Bay Area</div>
+			</div>
 		</div>
-		
+
+
+		<div class='container'>
+			<div id='instafeed'></div>
+		</div>
 
 
 	</div>
-	
-	
 
+
+
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var instafeed = new Instafeed({
+				get: 'user',
+				userId: '175375490',
+				clientId: '02b47e1b98ce4f04adc271ffbd26611d', //<!--DevSkim: ignore DS173237 -->
+				accessToken: '175375490.1677ed0.c4bb0b70739844dba24c0ecda194105f',
+				resolution: 'standard_resolution',
+				links: 'false',
+				template: '<div class="insta-image"><img src="{{image}}"/></div>',
+				sortBby: 'most-recent',
+				after: function () {
+					$("#instafeed").slick({
+						slidesToShow: 3,
+						adaptiveHeight: false,
+						slidesToScroll: 1,
+						autoplay: true,
+						autoplaySpeed: 1500,
+						arrows: true,
+						responsive: [
+						{
+										breakpoint: 1100,
+										settings: {
+											slidesToShow: 2,
+											slidesToScroll: 1
+										}
+										},
+										{
+										breakpoint: 800,
+										settings: {
+											slidesToShow: 1,
+											slidesToScroll: 1
+										}
+										}
+										// You can unslick at a given breakpoint now by adding:
+										// settings: "unslick"
+										// instead of a settings object
+									]
+					});
+				}
+			});
+			instafeed.run();
+		})
+	</script>
 </body>
 
-<script>
 
-</script>
+
 
 </html>
